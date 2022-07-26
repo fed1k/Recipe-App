@@ -1,1 +1,5 @@
-<h1>Public recipes</h1>
+<div>
+  <% @recipes.each do |i|%>
+    <span><%= i.name%></span>
+  <%end%>
+</div>
