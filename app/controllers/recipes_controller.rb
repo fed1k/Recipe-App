@@ -14,6 +14,10 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new
   end
 
+  def public
+    @recipes = Recipe.where(public: true)
+  end
+
   # GET /recipes/1/edit
   def edit; end
 

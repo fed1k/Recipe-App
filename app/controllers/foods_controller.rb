@@ -14,6 +14,8 @@ class FoodsController < ApplicationController
     @food = Food.new
   end
 
+  def shopping; end
+
   # GET /foods/1/edit
   def edit; end
 
