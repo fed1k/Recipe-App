@@ -91,7 +91,7 @@ input[value="Sign up"] {
 }
 
 input[value="Log in"]:hover,
-input[value="Sign up"]:hover  {
+input[value="Sign up"]:hover {
   cursor: pointer;
 }
 
@@ -110,9 +110,13 @@ input[value="Sign up"]:hover  {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   background-size: 100% 0;
-  transition: .4s cubic-bezier(0.41, 0.02, 0, 1);
-  background-image: linear-gradient(yellow,yellow);
+  transition: 0.4s cubic-bezier(0.41, 0.02, 0, 1);
+  background-image: linear-gradient(yellow, yellow);
   background-repeat: no-repeat;
+}
+
+.name_and_destroy a {
+  text-decoration: none;
 }
 
 .hey a:hover {
@@ -177,16 +181,12 @@ em {
   gap: 16px;
 }
 
-.name_and_destroy form  button {
+.name_and_destroy form button {
   border: none;
   background-color: #fff;
   text-decoration: underline;
 }
 
-.name_and_destroy form  button:hover {
+.name_and_destroy form button:hover {
   cursor: pointer;
-}
-
-.name_and_destroy a {
-  text-decoration: none;
 }
