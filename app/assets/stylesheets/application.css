@@ -71,14 +71,16 @@ body {
   font-size: 60px;
 }
 
-#user_password, #user_email {
+#user_password,
+#user_email {
   padding: 5px 8px;
   border-radius: 3px;
   border: 1px rgb(0, 0, 0, 0.2) solid;
   outline: none;
 }
 
-input[value="Log in"], input[value="Sign up"] {
+input[value="Log in"],
+input[value="Sign up"] {
   padding: 5px 15px;
   font-size: 16px;
   border: 1px rgb(0, 0, 0, 0.2) solid;
@@ -88,7 +90,8 @@ input[value="Log in"], input[value="Sign up"] {
   border-radius: 3px;
 }
 
-input[value="Log in"]:hover, input[value="Sign up"]:hover  {
+input[value="Log in"]:hover,
+input[value="Sign up"]:hover  {
   cursor: pointer;
 }
 
@@ -134,7 +137,9 @@ label[for="user_remember_me"] {
   gap: 20px;
 }
 
-label[for="user_email"], label[for="user_password"], label[for="user_password_confirmation"] {
+label[for="user_email"],
+label[for="user_password"],
+label[for="user_password_confirmation"] {
   color: white;
 }
 
