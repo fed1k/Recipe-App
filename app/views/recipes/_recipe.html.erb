@@ -1,32 +1,34 @@
 <div id="<%= dom_id recipe %>">
-  <p>
-    <strong>Name:</strong>
-    <%= recipe.name %>
-  </p>
+  <div class="name_and_destroy">
+    <h2>
+      <%= link_to recipe.name, recipe %>
+    </h2>
+    <%= button_to "Destroy this recipe", @recipe, method: :delete %>
+  </div>
 
-  <p>
+  <%# <p>
     <strong>Preparation time:</strong>
     <%= recipe.preparation_time %>
-  </p>
+  
+
+  <%# <p> %>
+    <%# <strong>Cooking time:</strong> %>
+    <%# <%= recipe.cooking_time %> 
+  <%# </p> %>
 
   <p>
-    <strong>Cooking time:</strong>
-    <%= recipe.cooking_time %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
+    <%# <strong>Description:</strong> %>
     <%= recipe.description %>
   </p>
 
-  <p>
-    <strong>Public:</strong>
-    <%= recipe.public %>
-  </p>
+  <%# <p> %>
+    <%# <strong>Public:</strong> %>
+    <%# <%= recipe.public %>
+  <%# </p> %>
 
-  <p>
-    <strong>User:</strong>
-    <%= recipe.user_id %>
-  </p>
+  <%# <p> %>
+    <%# <strong>User:</strong> %>
+    <%# <%= recipe.user_id %>
+  <%# </p> %>
 
 </div>
