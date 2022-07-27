@@ -190,3 +190,29 @@ em {
 .name_and_destroy form button:hover {
   cursor: pointer;
 }
+
+#foods {
+  margin: 4%;
+}
+
+.foods-table {
+  border: 1px solid #c0c0c0;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+.foods-table th {
+  border: 1px solid black;
+  padding: 9px;
+  background: #fff;
+}
+
+.foods-table td {
+  padding: 5px;
+}
+
+.sub-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 6%;
+}

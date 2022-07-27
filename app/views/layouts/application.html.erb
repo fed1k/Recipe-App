@@ -22,8 +22,6 @@
         <%= link_to 'Sign out', destroy_user_session_path, method: :delete  %>
         <span>Logged in as: <%= current_user.email%></span>
       </nav>
-    <%# <% else %>
-      <%# <a href="/users/sign_in">Sign in</a> %>
     <%end%>
     
     <%= yield %>
