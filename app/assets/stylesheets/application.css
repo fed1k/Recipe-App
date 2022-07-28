@@ -157,6 +157,19 @@ em {
   color: white;
 }
 
+.public-recipes-main-container > div {
+  border: 1px solid black;
+  padding: 12px 15px;
+  display: flex;
+  gap: 20px;
+}
+
+.public-recipes-main-container > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 #recipes > div {
   border: 1px solid black;
   display: grid;
@@ -185,6 +198,14 @@ em {
   border: none;
   background-color: #fff;
   text-decoration: underline;
+}
+
+.sh-list_add-ingre-btn form button {
+  border: 2px solid black;
+  text-decoration: none;
+  background-color: #fff;
+  padding: 5px 7px;
+  font-weight: bold;
 }
 
 .name_and_destroy form button:hover {
@@ -229,19 +250,6 @@ em {
   gap: 20px;
 }
 
-.public-recipes-main-container > div {
-  border: 1px solid black;
-  padding: 12px 15px;
-  display: flex;
-  gap: 20px;
-}
-
-.public-recipes-main-container > div > div {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
 .prep-public-div {
   display: flex;
   justify-content: space-between;
@@ -254,12 +262,4 @@ em {
 .sh-list_add-ingre-btn {
   display: flex;
   justify-content: space-between;
-}
-
-.sh-list_add-ingre-btn form button {
-  border: 2px solid black;
-  text-decoration: none;
-  background-color: #fff;
-  padding: 5px 7px;
-  font-weight: bold;
 }
