@@ -1,10 +1,30 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @recipe %>
-
-<div>
-  <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
-  <%= link_to "Back to recipes", recipes_path %>
-
-  <%= button_to "Destroy this recipe", @recipe, method: :delete %>
+<%# <%= render @recipe %>
+<div class="recipe-show-page">
+  <div>
+    <div class="name_and_destroy">
+      <h2>
+        <%= link_to @recipe.name, @recipe %>
+      </h2>
+      <div class="prep-public-div">
+        <span>Preparation time: <%=@recipe.preparation_time%> min</span>
+        <% if @recipe.public == true %><span>Public ✔</span> <% else %> <span>Public ❌</span> <%end%>
+      </div>
+      <span>Cooking time: <%=@recipe.cooking_time%> min</span>
+      <span>Steps go here...</span>
+      <div class="sh-list_add-ingre-btn">
+        <%= button_to "Generate shopping list" %>
+        <%= button_to "Add ingredient" %>
+      </div>
+      <%# <%= button_to "Destroy this recipe", @recipe, method: :delete %>
+    </div>
+  </div>
+  
+  <div>
+    <%# <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %>
+    <%= link_to "Back to recipes", recipes_path %>
+  
+    <%# <%= button_to "Destroy this recipe", @recipe, method: :delete %>
+  </div>
 </div>

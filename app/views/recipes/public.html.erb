@@ -1,5 +1,15 @@
-<div>
+<h2 id="public-header-text">Public Recipes</h2>
+<div class="public-recipes-main-container">
   <% @recipes.each do |i|%>
-    <span><%= i.name%></span>
+    <div>
+      <div>
+        <h2><%= i.name%></h2>
+        <span>By: <%= User.find(i.user_id).name%></span>
+      </div>
+      <div>
+        <span>Total food items: <%=%></span>
+        <span>Total price: $<%=%></span>
+      </div>
+    </div>
   <%end%>
 </div>
