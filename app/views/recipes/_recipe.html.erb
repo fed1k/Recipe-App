@@ -1,12 +1,14 @@
-<div id="<%= dom_id recipe %>">
-  <div class="name_and_destroy">
-    <h2>
-      <%= link_to recipe.name, recipe %>
-    </h2>
-    <%= button_to "Destroy this recipe", @recipe, method: :delete %>
+<% if recipe.user_id == current_user.id %>
+  <div id="<%= dom_id recipe %>">
+    <div class="name_and_destroy">
+      <h2>
+        <%= link_to recipe.name, recipe %>
+      </h2>
+      <% if can? :destroy, recipe%><%= button_to "Destroy this recipe", recipe, method: :delete %><%end%>
+    </div>
+    <p>
+      <%= recipe.description %>
+    </p>
+  
   </div>
-  <p>
-    <%= recipe.description %>
-  </p>
-
-</div>
+<% end %>

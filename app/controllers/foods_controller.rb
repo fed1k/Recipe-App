@@ -15,7 +15,9 @@ class FoodsController < ApplicationController
     @food = Food.new
   end
 
-  def shopping; end
+  def shopping
+    @general_shopping_list = Food.all
+  end
 
   # GET /foods/1/edit
   def edit; end
@@ -23,6 +25,7 @@ class FoodsController < ApplicationController
   # POST /foods or /foods.json
   def create
     @food = Food.new(food_params)
+    @food.user_id = current_user.id
 
     respond_to do |format|
       if @food.save

@@ -15,7 +15,7 @@
       <span>Steps go here...</span>
       <div class="sh-list_add-ingre-btn">
         <%= button_to "Generate shopping list" %>
-        <%= button_to "Add ingredient" %>
+        <% if @recipe.user_id == current_user.id %><%= link_to "Add ingredient", "/recipes/#{params[:id]}/add_ingredient" %><%end%>
       </div>
       <%# <%= button_to "Destroy this recipe", @recipe, method: :delete %>
     </div>

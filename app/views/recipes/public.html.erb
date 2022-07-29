@@ -3,7 +3,7 @@
   <% @recipes.each do |i|%>
     <div>
       <div>
-        <h2><%= i.name%></h2>
+        <a href="/recipes/<%=i.id%>"><%= i.name%></a>
         <span>By: <%= User.find(i.user_id).name%></span>
       </div>
       <div>

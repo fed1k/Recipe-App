@@ -1,5 +1,4 @@
 class RecipeFoodsController < ApplicationController
-  load_and_authorize_resource
   before_action :set_recipe_food, only: %i[show edit update destroy]
 
   # GET /recipe_foods or /recipe_foods.json
@@ -21,9 +20,8 @@ class RecipeFoodsController < ApplicationController
   # POST /recipe_foods or /recipe_foods.json
   def create
     @recipe_food = RecipeFood.new(recipe_food_params)
-
     respond_to do |format|
-      if @recipe_food.save
+      if @recipe_food.save!
         format.html { redirect_to recipe_food_url(@recipe_food), notice: 'Recipe food was successfully created.' }
         format.json { render :show, status: :created, location: @recipe_food }
       else
