@@ -1,0 +1,14 @@
+<%# <div id="<%= dom_id food %>
+<% if food.user_id == current_user.id%>
+  <th><%= food.name %></th>
+
+  <th><%= food.measurement_unit %></th>
+
+  <th><%= food.price %></th>
+
+  <% if request.path != '/general_shopping_list'%><th><% if can? :destroy, food %><%= button_to "Destroy this food", food, method: :delete %><%end%></th><% end %>
+<%end%>
+
+<%#  %>
+
+<%# </div> %>

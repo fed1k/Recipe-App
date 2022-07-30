@@ -1,0 +1,281 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+
+ */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #f1f1f1;
+  padding: 16px 10px;
+  display: flex;
+  gap: 24px;
+}
+
+.navLink {
+  text-decoration: none;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: darkcyan;
+}
+
+.navLink::after {
+  content: '';
+  width: 0;
+  height: 1px;
+  display: block;
+  background-color: green;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  margin: auto;
+}
+
+.navLink:hover::after {
+  width: 100%;
+  transition: 0.5s;
+  margin: auto;
+}
+
+.check {
+  background-image: url(sign.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw, 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+body {
+  height: 100vh;
+}
+
+.login-text {
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: -2px 2px 5px white;
+  font-size: 60px;
+}
+
+#user_password,
+#user_email {
+  padding: 5px 8px;
+  border-radius: 3px;
+  border: 1px rgb(0, 0, 0, 0.2) solid;
+  outline: none;
+}
+
+input[value="Log in"],
+input[value="Sign up"] {
+  padding: 5px 15px;
+  font-size: 16px;
+  border: 1px rgb(0, 0, 0, 0.2) solid;
+  background-color: yellow;
+  color: black;
+  width: 100%;
+  border-radius: 3px;
+}
+
+input[value="Log in"]:hover,
+input[value="Sign up"]:hover {
+  cursor: pointer;
+}
+
+#new_user {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hey a {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background-size: 100% 0;
+  transition: 0.4s cubic-bezier(0.41, 0.02, 0, 1);
+  background-image: linear-gradient(yellow, yellow);
+  background-repeat: no-repeat;
+}
+
+.name_and_destroy a {
+  text-decoration: none;
+}
+
+.hey a:hover {
+  background-size: 100% 100%;
+  color: black;
+}
+
+label[for="user_remember_me"] {
+  color: white;
+}
+
+.sign_up_route {
+  background-image: url(download.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw, 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  padding-left: 16%;
+  gap: 20px;
+}
+
+label[for="user_email"],
+label[for="user_password"],
+label[for="user_password_confirmation"] {
+  color: white;
+}
+
+.sign_up_route h2 {
+  color: white;
+  font-size: 40px;
+  padding-left: 2%;
+}
+
+em {
+  color: white;
+}
+
+.public-recipes-main-container > div {
+  border: 1px solid black;
+  padding: 12px 15px;
+  display: flex;
+  gap: 20px;
+}
+
+.public-recipes-main-container > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#recipes > div {
+  border: 1px solid black;
+  display: grid;
+  padding: 15px 22px;
+  grid-template-columns: 1fr 3fr;
+  justify-content: space-between;
+}
+
+#recipes {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.recipes_index_page {
+  margin: 10%;
+}
+
+.name_and_destroy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.name_and_destroy form button {
+  border: none;
+  background-color: #fff;
+  text-decoration: underline;
+}
+
+.sh-list_add-ingre-btn form button {
+  border: 2px solid black;
+  text-decoration: none;
+  background-color: #fff;
+  padding: 5px 7px;
+  font-weight: bold;
+}
+
+.name_and_destroy form button:hover {
+  cursor: pointer;
+}
+
+#foods {
+  margin: 4%;
+}
+
+.foods-table {
+  border: 1px solid #c0c0c0;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+.foods-table th {
+  border: 1px solid black;
+  padding: 9px;
+  background: #fff;
+}
+
+.foods-table td {
+  padding: 5px;
+}
+
+.sub-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 6%;
+}
+
+#public-header-text {
+  text-align: center;
+  padding: 10px;
+}
+
+.public-recipes-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.prep-public-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recipe-show-page {
+  padding: 4% 8%;
+}
+
+.sh-list_add-ingre-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.alert {
+  background-color: rgb(0, 255, 0, 0.2);
+}
+
+.no-items-text {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.ingredient-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border: 1px solid rgb(0, 0, 0, 0.6);
+}
