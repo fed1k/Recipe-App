@@ -1,24 +1,38 @@
 # Recipe App
+Railicious is a recipe application where you can store your recipes and share your recipes publicly if you want. Users can register to add recipes and login to view their private recipes. Publicly available recipes can be accessed right from the home page without logging in.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Built with:
+ * Ruby on Rails
+ * PostgreSQL
+ * CSS
+ * HTML5
 
-Things you may want to cover:
+## Prerequisites
+* You need Ruby V3+, Rails V7+ and Postgresql installed on your machine.
 
-* Ruby version
 
-* System dependencies
+## Setup
+* Clone the Github Repository
+* Go to the Project Directory
+* Run bundle install
+* Create a .env file and copy the content from .env.example file. Assign the values to username and password according to your DB credentials.
+* If you are on windows, you might need to run rails tailwindcss:watch to precompile tailwindcss
+* If you are on linux, you need to run ./bin/dev
 
-* Configuration
+## Usage
+* Run `rails server` or `rails s` to start the server and start the application.
 
-* Database creation
+## Authors
+* 💻Firdavs Allamurotov
+  * Github: [@fed1k](https://github.com/fed1k)
+  * LinkedIn: [@fed1k](https://www.linkedin.com/in/firdavs-allamurotov/)
 
-* Database initialization
+* 💻Chris Clothier
+  * LinkedIn: [@chris](https://www.linkedin.com/in/crclothier/)
+  * Github: [@chris](https://github.com/CRClothier) 
 
-* How to run the test suite
+## Acknowledgments
+ * Microverse
+## 📝License
+* This project is MIT licensed.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
