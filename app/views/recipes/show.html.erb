@@ -15,10 +15,25 @@
       <span>Steps go here...</span>
       <div class="sh-list_add-ingre-btn">
         <%= button_to "Generate shopping list" %>
-        <%= button_to "Add ingredient" %>
+        <% if @recipe.user_id == current_user.id %><%= link_to "Add ingredient", "/recipes/#{params[:id]}/recipe_foods/new" %><%end%>
       </div>
       <%# <%= button_to "Destroy this recipe", @recipe, method: :delete %>
     </div>
+  </div>
+
+  <div class="ingredients-for-the-recipe">
+    <% if @recipe_foods.size > 0 %>
+      <% @recipe_foods.each do |recipe_food|%>
+        <div class="ingredient-div">
+          <% correct_food = Food.find(recipe_food.food_id) %>
+          <h3>Food: <%= correct_food.name%></h3>
+          <h4>Quantity: <%= recipe_food.quantity%></h4>
+          <h4>Value: <%= correct_food.price * recipe_food.quantity %></h4>
+        </div>
+      <%end%>
+    <%else%>
+      <h3 class="no-items-text">No items added yet😢</h3>
+    <%end%>
   </div>
   
   <div>

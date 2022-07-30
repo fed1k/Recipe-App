@@ -263,3 +263,19 @@ em {
   display: flex;
   justify-content: space-between;
 }
+
+.alert {
+  background-color: rgb(0, 255, 0, 0.2);
+}
+
+.no-items-text {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.ingredient-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border: 1px solid rgb(0, 0, 0, 0.6);
+}

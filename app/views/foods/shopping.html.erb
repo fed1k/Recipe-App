@@ -1,1 +1,31 @@
-<h1>general shopping list</h1>
+<div id="general_shopping_list">
+  <table class="foods-table">
+    <thead>
+	    <tr>
+	    	<th>Food</th>
+	    	<th>Measurement unit</th>
+	    	<th>Unit price</th>
+	    	<% if request.path != '/general_shopping_list' %><th>Actions</th><%end%>
+	    </tr>
+	  </thead>
+    <tbody>
+      <%# <% RecipeFood.all.each do |i|%>
+        <%# <h1><%= i.quantity%>
+      <%# <%end%>
+      <%@general_shopping_list.each do |food| %>
+        <%# <% if food.id != @recipe_foods.where('food_id = food.id') %>
+          <%# <% food.recipe_foods.each do |i|%>
+            <%# <% if food.id != i.food_id%>
+              <tr class="odd">
+                <%= render food %>
+              </tr>
+            <%# <%end%>
+          <%# <%end%>
+        <%# <%end%>
+        <%# <p> %>
+          <%# <%= link_to "Show this food", food %>
+        <%# </p> %>
+      <% end %>
+	  </tbody>
+  </table>
+</div>
