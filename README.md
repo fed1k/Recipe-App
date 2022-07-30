@@ -1,5 +1,5 @@
 # Recipe App
-Railicious is a recipe application where you can store your recipes and share your recipes publicly if you want. Users can register to add recipes and login to view their private recipes. Publicly available recipes can be accessed right from the home page without logging in.
+Rwecipe-App is a recipe application where you can store your recipes and share your recipes publicly if you want. Users can register to add recipes and login to view their private recipes. Publicly available recipes can be accessed right from the home page without logging in.
 
 ## Built with:
  * Ruby on Rails
