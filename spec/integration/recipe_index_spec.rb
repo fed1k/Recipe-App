@@ -18,6 +18,5 @@ RSpec.describe 'Recipes', type: :system do
       click_link 'Log in'
       expect(page).to have_text('Remember me')
     end
-
   end
 end
