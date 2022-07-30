@@ -9,10 +9,19 @@
 	    </tr>
 	  </thead>
     <tbody>
-      <% @general_shopping_list.each do |food| %>
-        <tr class="odd">
-          <%= render food %>
-        </tr>
+      <%# <% RecipeFood.all.each do |i|%>
+        <%# <h1><%= i.quantity%>
+      <%# <%end%>
+      <%@general_shopping_list.each do |food| %>
+        <%# <% if food.id != @recipe_foods.where('food_id = food.id') %>
+          <%# <% food.recipe_foods.each do |i|%>
+            <%# <% if food.id != i.food_id%>
+              <tr class="odd">
+                <%= render food %>
+              </tr>
+            <%# <%end%>
+          <%# <%end%>
+        <%# <%end%>
         <%# <p> %>
           <%# <%= link_to "Show this food", food %>
         <%# </p> %>

@@ -17,6 +17,11 @@ class FoodsController < ApplicationController
 
   def shopping
     @general_shopping_list = Food.all
+    # @recipe_foods = RecipeFood.all
+    @array = []
+    @general_shopping_list.each_with_index do |item, _index|
+      @array << item if RecipeFood.where(food_id: item.id)
+    end
   end
 
   # GET /foods/1/edit

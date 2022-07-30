@@ -1,4 +1,4 @@
-<%= form_with model: recipe_food, url: new_recipe_recipe_food_path do |form| %>
+<%= form_with model: recipe_food, url: recipe_recipe_foods_path(recipe) do |form| %>
   <% if recipe_food.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(recipe_food.errors.count, "error") %> prohibited this recipe_food from being saved:</h2>
@@ -17,14 +17,17 @@
   </div>
 
   <div>
+    <%@foods.each do |food| %>
+      <h3><%=food.name%> id: <%= food.id%></h3>
+    <%end%>
     <%= form.label :food_id, style: "display: block" %>
-    <%= form.text_field :food_id %>
+    <%= form.number_field :food_id, placeholder: "Type the id of the food" %>
   </div>
 
-  <div>
+  <%# <div>
     <%= form.label :recipe_id, style: "display: block" %>
-    <%= form.text_field :recipe_id %>
-  </div>
+    <%# <%= form.text_field :recipe_id %>
+  <%# </div>  %>
 
   <div>
     <%= form.submit %>

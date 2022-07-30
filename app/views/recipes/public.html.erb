@@ -7,8 +7,8 @@
         <span>By: <%= User.find(i.user_id).name%></span>
       </div>
       <div>
-        <span>Total food items: <%=%></span>
-        <span>Total price: $<%=%></span>
+        <span>Total food items: <%= RecipeFood.where(recipe_id: i.id).count%></span>
+        <span>Total price: $<%= Food.where(id: RecipeFood.where(recipe_id: i.id)).sum(:price) %></span>
       </div>
     </div>
   <%end%>
